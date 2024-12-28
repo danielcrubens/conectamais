@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ["nuxt-vuefire", '@vue-email/nuxt','@nuxtjs/tailwindcss',  ],
+  modules: ["nuxt-vuefire", '@vue-email/nuxt','@nuxtjs/tailwindcss', '@nuxtjs/google-fonts' ],
   vuefire: {
     config: {
       apiKey: process.env.FIREBASE_API_KEY,
@@ -19,5 +19,13 @@ export default defineNuxtConfig({
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY
   }, 
-  
+  css: ["@/assets/css/tailwind.css"],
+  components: true,
+  googleFonts: {
+    base64: true,
+    overwriting: true,
+    families: {
+      Montserrat: [400, 500, 600, 700],
+    },
+  },
 })

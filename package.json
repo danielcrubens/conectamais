@@ -11,18 +11,18 @@
   },
   "dependencies": {
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "firebase": "^10.14.1",
+    "lucide-vue-next": "0.469.0",
     "nuxt": "^3.14.1592",
     "nuxt-vuefire": "^1.0.4",
     "resend": "^4.0.1",
+    "tailwind-variants": "^0.3.0",
     "vue": "latest",
     "vue-router": "latest",
+    "vue-toastification": "^2.0.0-rc.5",
     "vuefire": "^3.2.0",
-    "zod": "^3.24.1", 
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "lucide-vue-next": "0.469.0",   
-    "vue-toastification": "^2.0.0-rc.5"
-
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.2",
