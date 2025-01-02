@@ -1,8 +1,9 @@
  export interface FormData {
   name: string
   email: string
-  sector: string // Adicionado campo sector
+  sector: string 
   services: string[]
+  message: string
 }
 
 export interface ServiceCompletionData {
