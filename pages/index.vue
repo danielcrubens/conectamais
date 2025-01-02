@@ -40,7 +40,7 @@ const handleRegistration = async (data: { name: string; email: string; sector: s
       nome: data.name,
       email: data.email,
       setor: data.sector, 
-      menssagem: data.message
+      menssagem: data.message || null
     })
 
     if (!firestoreResult.success) {
