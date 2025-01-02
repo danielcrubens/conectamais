@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3 py-6 bg-blue">
+  <div class="px-3 py-6 bg-indigo-700/95 rounded-t-lg">
     <div class="flex justify-end mb-2">
       <span class="text-sm text-white">Passo {{ currentStep }} de {{ totalSteps }}</span>
    </div>
