@@ -20,9 +20,9 @@ export default defineEventHandler(async (event) => {
 
     // Configura as opções do email
     const emailOptions = {
-      from: 'Acme <comercial@servenc.com.br>',
+      from: 'Mapeamento Necessidades <contato@danielcrubens.dev>',
       to: [email],
-      subject: 'Confirmação de Cadastro',
+      subject: 'Confirmação de Mapeamento',
       html: template.html,
     }
 
