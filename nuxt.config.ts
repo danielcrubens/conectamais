@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     base64: true,
     overwriting: true,
     families: {
-      Montserrat: [400, 500, 600, 700],
+      Montserrat: [500, 600, 700],
     },
   },
 })
