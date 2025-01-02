@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto h-s mt-14 bg-white rounded-lg shadow-2xl">
+  <div class="mx-auto mt-8 md:mt-3 bg-white rounded-lg shadow-2xl">
     <ProgressBar :current-step="currentStep" />
 
     <WelcomeStep v-if="currentStep === 1" @next="nextStep" />
@@ -19,8 +19,9 @@ const currentStep = ref(1)
 const formData = ref<FormData>({
   name: '',
   email: '',
-  sector: '', // Inicializado campo sector
-  services: []
+  sector: '',
+  services: [],
+  message: '',
 })
 
 const { addDocument } = useFirestoreActions()
@@ -33,12 +34,13 @@ const previousStep = () => {
   currentStep.value--
 }
 
-const handleRegistration = async (data: { name: string; email: string; sector: string }) => {
+const handleRegistration = async (data: { name: string; email: string; sector: string; message: string }) => {
   try {
     const firestoreResult = await addDocument('usuarios', {
       nome: data.name,
       email: data.email,
-      setor: data.sector // Adicionado setor ao documento
+      setor: data.sector, 
+      menssagem: data.message
     })
 
     if (!firestoreResult.success) {
@@ -50,7 +52,6 @@ const handleRegistration = async (data: { name: string; email: string; sector: s
       body: {
         email: data.email,
         name: data.name,
-        sector: data.sector // Incluído setor no email
       }
     })
 
@@ -76,7 +77,8 @@ const handleCompletion = () => {
     name: '',
     email: '',
     sector: '', // Incluído reset do setor
-    services: []
+    services: [],
+    message: '',
   }
 
   // Voltar para o primeiro passo
